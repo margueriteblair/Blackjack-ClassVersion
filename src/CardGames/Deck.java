@@ -1,6 +1,7 @@
 package CardGames;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 public class Deck {
@@ -10,6 +11,9 @@ public class Deck {
     //values
     private List<Card> cards;
 
+    //TODO: add constructor that will allow custom suit and values
+    //TODO: be able to add jokers (boolean?), or add a new value for the switch statement
+
     public Deck() {
         cards = new ArrayList<>();
         for (var suit : SUITS) {
@@ -17,5 +21,10 @@ public class Deck {
                 cards.add(new Card(value, suit));
             }
         }
+    }
+
+    public void shuffle() {
+        Collections.shuffle(cards);
+        //you could also use the fisher yates algorithm
     }
 }
