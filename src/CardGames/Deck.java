@@ -27,4 +27,8 @@ public class Deck {
         Collections.shuffle(cards);
         //you could also use the fisher yates algorithm
     }
+
+    public Card draw()  {
+        return cards.remove(cards.size()-1);
+    }
 }
